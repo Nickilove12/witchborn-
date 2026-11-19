@@ -27,8 +27,6 @@ func _process(d):
  if move.length()>.1: v=move
  hero+=(v.normalized() if v.length()>1 else v)*245*d
  hero.x=clampf(hero.x,40,1240); hero.y=clampf(hero.y,120,680)
- if Input.is_key_just_pressed(KEY_1): spell(false)
- if Input.is_key_just_pressed(KEY_2): spell(true)
  for e in enemies:
   var delta=e.p-hero
   if delta.length()>35: e.p-=delta.normalized()*48*d
@@ -57,6 +55,9 @@ func spell(blood):
   if enemies[i].hp<=0: enemies.remove_at(i); kills+=1
  while enemies.size()<7: spawn()
 func _input(e):
+ if e is InputEventKey and e.pressed and not e.echo:
+  if e.keycode==KEY_1: spell(false)
+  elif e.keycode==KEY_2: spell(true)
  if e is InputEventScreenTouch:
   if e.pressed:
    if e.position.x<get_viewport_rect().size.x*.48 and move_id==-1:
