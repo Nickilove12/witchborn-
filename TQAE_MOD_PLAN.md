@@ -1,49 +1,52 @@
-# WITCHBORN — Titan Quest: Anniversary Edition Mod
+# WITCHBORN — Titan Quest design reference (not a mod target)
 
-## Target
+## Project decision
 
-- Game: **Titan Quest: Anniversary Edition**
-- Explicitly excluded: **Ragnarök** content and expansion dependencies.
-- Mod type: custom mastery / database mod for the Anniversary Edition toolchain.
-- The existing Godot prototype is preserved separately; it is not the deliverable for this mod.
+WITCHBORN is a **standalone isometric dark-fantasy action RPG for Android**, developed in Godot.
 
-## Core design
+It is **not** a Titan Quest: Anniversary Edition mod. The player should not need Titan Quest, its Art Manager, a Windows installation, or any Titan Quest files to play WITCHBORN.
 
-WITCHBORN is one custom mastery with three thematic paths. The player still chooses the normal second mastery in the character creation flow. The three WITCHBORN paths are not three separate masteries and do not replace the game's two-mastery rule.
+Titan Quest: Anniversary Edition is a **gameplay and skill-system reference only**. We are taking inspiration from its readable isometric combat, two independent mastery trees, skill-point progression, and linked skill improvements. WITCHBORN will use original skills, names, art, code, and data.
 
-### Nature
-Plant growth, roots, thorns, spores, animal allies and nature spirits. Mix of area control, damage over time and summons.
+## Core mastery design
 
-### Blood
-Life drain, blood rites, sacrifice-for-power mechanics and close-range or targeted blood attacks. Skills should have meaningful costs and recovery rather than being free burst damage.
+WITCHBORN has two independent masteries:
 
-### Darkness
-Curses, weakening effects, shadow damage, fear and dark summons. Focus on control and weakening enemies.
+- **Nature:** poison, plants, thorns, insects, auras, and plant companions.
+- **Blood Magic:** bleeding, life drain, blood projectiles, blood rites, and blood summons.
 
-## Progression rules
+Each mastery has its own progression bar and unlock thresholds. Skill points can be freely distributed between both masteries. The player is never forced to specialize in only one.
 
-- One WITCHBORN mastery bar.
-- Skill points can be invested across Nature, Blood and Darkness; no forced single-path commitment.
-- Skills unlock through mastery level and prerequisite skills, following Titan Quest's existing skill-tree conventions.
-- The design must be tested in the Anniversary Edition UI before finalizing the exact number and placement of skills.
+There is no Darkness mastery in the current approved scope.
 
-## First playable milestone
+## Progression reference
 
-1. Confirm the Anniversary Edition Art Manager and database templates can build a clean empty WITCHBORN mod.
-2. Clone an existing mastery record and its matching in-game UI records as a compatibility-safe starting point.
-3. Rename/localize the mastery and create a minimal three-path skill tree.
-4. Add one test skill per path and verify they appear, can be learned, and work in-game.
-5. Expand the tree only after the first three skills pass in-game testing.
+Use the broad Titan Quest structure as inspiration:
 
-## Tooling and compatibility notes
+- Six mastery unlock tiers.
+- A mastery progression bar that unlocks skill tiers.
+- Active skills, passive skills, and linked upgrade nodes.
+- Skill ranks improve damage, projectile count, duration, radius, summon strength, or other clearly described properties.
+- Equipment can grant skill bonuses or improve specific skills.
 
-- Use the Art Manager installed with Titan Quest: Anniversary Edition.
-- Use Anniversary Edition database records/templates as the source of truth.
-- Do not copy Ragnarök-only records, assets, or dependencies.
-- Keep all source records and build output in a dedicated custom mod folder.
-- Back up original database files before any experimental database injection. Prefer a normal Custom Game mod during development.
-- A working Windows installation of Titan Quest: Anniversary Edition is required to build and test the actual mod. Repository text files alone cannot produce a verified playable mod.
+The exact thresholds, rank caps, and balance values must be designed for WITCHBORN and tested in the Godot game. Do not assume Titan Quest's database values or implementation can be copied directly.
+
+## Development workflow
+
+1. Finalize the Nature mastery skill design.
+2. Finalize the Blood Magic mastery skill design.
+3. Implement the two mastery trees and freely assignable skill points in Godot.
+4. Implement one-handed wands and off-hand relics/foci.
+5. Integrate skills into isometric combat.
+6. Test on Android devices and tune performance, controls, and balance.
+
+## Scope and compatibility
+
+- Engine: Godot 4.x.
+- Primary target: Android.
+- The game must remain a real-time isometric action RPG, not a 2D pixel-art game.
+- Titan Quest assets, proprietary database records, and expansion dependencies are not part of the project.
 
 ## Current status
 
-This repository began as a Godot prototype. The Anniversary Edition mod work is a separate target and must be built and tested with the game's own tools. No playable Titan Quest mod is claimed until an actual Art Manager build has been tested in-game.
+The repository contains an early Godot combat prototype and design documents. It is not yet a finished game, and no complete or verified Android APK is currently claimed.
