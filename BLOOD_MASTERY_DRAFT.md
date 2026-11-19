@@ -141,6 +141,18 @@ Auf der höchsten regulären Freischaltungsstufe kommen keine weiteren Grundzaub
 | 32 | Packender Griff | Tentakel-Verbesserung |
 | 32 | Schwelendes Fieber | Seuchen-Verbesserung |
 
+## Ranginterne Effekte — keine zusätzlichen Skill-Knoten
+
+Die folgenden Effekte aus den Fähigkeitsbeschreibungen sind keine zusätzlichen Skillplätze. Sie werden als Rangskalierung oder als Bestandteil des jeweils zugeordneten Modifikators umgesetzt, damit der Baum exakt bei den 22 oben zugeordneten Knoten bleibt:
+
+- **Gerinnungsschnitt** gehört zur Blutlanze und wird über deren Treffer-/Blutungsränge mitgeführt.
+- **Tiefes Opfer** gehört zu Blutopfer und Ritual der Raserei; höhere Ränge erhöhen Bonus und Lebenskosten gemeinsam.
+- **Blutige Inkubation** gehört zur Blutseuche und wird über deren höhere Ränge freigeschaltet.
+- **Weite Eruption** und **Aufreißende Welle** gehören zur Blutnova; Radius und Blutungswirkung skalieren über Grundfähigkeit und Blutsplitter.
+- **Mehrfacher Griff** und **Zerreißende Spitzen** gehören zu Blutigen Tentakeln; Trefferzahl und Blutung skalieren über Grundfähigkeit und Packender Griff.
+- **Stärkerer Sog** und **Gieriger Strom** gehören zum Blutigen Zug; Entzugsstärke und begrenzter Übergriff skalieren über dessen Ränge und Blutübertragung.
+- **Blutbindung** gehört zum Blutgolem und wird als begrenzter Nebeneffekt seiner hohen Ränge umgesetzt.
+
 ## Bewusst ausgeschlossen
 - **Herzstillstand:** vom Spieler gestrichen und bleibt gestrichen.
 - Keine weiteren Grundzauber oder zusätzlichen Beschwörungen.
