@@ -1,0 +1,27 @@
+name: Build WITCHBORN for Android
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  android:
+    name: Export installable Android APK
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Import project resources
+        run: godot --headless --editor --path . --quit
+      - name: Export debug APK
+        run: |
+          mkdir -p build
+          godot --headless --path . --export-debug "Android" build/WITCHBORN.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: WITCHBORN-Android
+          path: build/WITCHBORN.apk
+          if-no-files-found: error
