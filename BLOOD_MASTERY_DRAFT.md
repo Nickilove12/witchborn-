@@ -1,189 +1,164 @@
 # WITCHBORN — Blutmagie-Meisterschaft
-## Skillbaum-Entwurf v0.1
+## Verbindliche Skill-Spezifikation für Titan Quest: Anniversary Edition
 
-**Status:** Designentwurf zur Abstimmung  
-**Ausrichtung:** Blutungen, Lebensentzug, Selbstopfer, Seuchen und blutgebundene Beschwörung  
-**Vorbild für den Aufbau:** Titan Quest Anniversary Edition – sechs Meisterschaftsstufen, Grundfähigkeiten und verknüpfte Verbesserungen.  
-**Wichtig:** Schadenswerte, Kosten, Dauer und Abklingzeiten sind vorläufig und werden erst nach Spieltests festgelegt.
+**Status:** Design festgelegt; technische DBR-/Art-Manager-Umsetzung steht noch aus.  
+**Ausrichtung:** Blutungen, Lebensentzug, Blutgeschosse, Opfermagie, Seuchen und blutgebundene Beschwörung.  
+**Spielprinzip:** Eigenständige Meisterschaft, frei mit Natur oder einer späteren Finsternis-Meisterschaft kombinierbar. Ein Charakter kann weiterhin höchstens zwei Meisterschaften wählen.
 
 ## Grundregeln
-
-- Blutmagie ist eine eigenständige Meisterschaft mit eigenem Fortschrittsbalken.
-- Sie lässt sich frei mit Natur kombinieren. Es gibt keine Klassenbindung.
-- Die sechs Freischaltungsstufen orientieren sich am TQ-Prinzip: 1, 4, 10, 16, 24 und 32 Punkte im Blutmagie-Meisterschaftsbalken.
 - Blutung und Lebensentzug sind die zentralen Schadens- und Überlebensmechaniken.
-- Lebensopfer müssen spürbar und taktisch sein. Sie dürfen den Spieler nicht unbemerkt in eine sichere Schadensmaschine verwandeln.
-- Die genauen Rangcaps und Zahlen werden nach dem Prototyping festgelegt.
-
----
+- Lebensopfer sind bewusst aktivierte Risikofähigkeiten und keine automatische Ressourcenschleife.
+- Alle Skills verwenden die üblichen TQAE-Fähigkeitspunkte, Voraussetzungen, Ränge und Verknüpfungen.
+- Freischaltungsstufen des Meisterschaftsbalkens: 1, 4, 10, 16, 24 und 32 Punkte. Atlantis-Zusatzstufen werden erst nach Prüfung der konkreten Installation berücksichtigt.
+- Zahlenwerte, Rangcaps, Energiekosten, Abklingzeiten und Dauer werden nach dem ersten In-Game-Prototyp balanciert.
 
 ## Stufe 1 — Blut formen
 
 ### 1. Blutlanze
-**Typ:** Aktives Projektil  
-**Rolle:** Hauptangriff auf Distanz
+**Typ:** Aktives Projektil / Hauptangriff auf Distanz  
+Der Charakter formt Blut zu einer scharfen, verdichteten Lanze und schleudert sie als gerade Salve in Zielrichtung. Mit steigenden Rängen wachsen Schaden und an festgelegten Rangschwellen die Zahl der Lanzen.
 
-Der Charakter formt Blut zu einer oder mehreren scharfen Lanzen und schleudert sie auf Gegner. Mit steigender Fähigkeitstufe wachsen Schaden und – an festgelegten Rangschwellen – die Zahl der Lanzen.
-
-**Vorgeschlagene Verbesserungen:**
-- **Lanzensalve:** Erhöht die Zahl der abgefeuerten Blutlanzen.
-- **Durchbohrendes Blut:** Lanzen können mehrere Gegner in einer Linie treffen.
-- **Gerinnungsschnitt:** Ergänzt den Treffer um einen Blutungseffekt.
-
-**Designhinweis:** Die Lanzen sollen als klar erkennbare, spitze Blutkristalle bzw. verdichtete Blutgeschosse lesbar sein. Die zusätzliche Projektilanzahl steigt in deutlichen Sprüngen.
+**Verbesserungen**
+- **Lanzensalve:** Erhöht die Zahl der gleichzeitig abgefeuerten Blutlanzen.
+- **Durchbohrendes Blut:** Lanzen können mehrere Gegner hintereinander treffen.
+- **Gerinnungsschnitt:** Treffer verursachen zusätzlich Blutungsschaden über Zeit.
 
 ### 2. Blutpakt
-**Typ:** Passiv  
-**Rolle:** Nachhaltigkeit und Lebensgewinn
+**Typ:** Passive Lebensgewinn-Mechanik  
+Ein begrenzter Anteil des vom Charakter verursachten direkten Schadens wird in Lebensgewinn umgewandelt. Gegner, die bereits bluten, liefern einen zusätzlichen kleinen Lebensgewinn-Bonus.
 
-Ein Teil des vom Charakter verursachten Schadens wird in Lebensgewinn umgewandelt.
+**Verbesserung**
+- **Blutresonanz:** Verstärkt den Lebensgewinn gegen bereits blutende Gegner.
 
-**Vorgeschlagene Verbesserungen:**
-- **Stärkerer Pakt:** Erhöht den Umwandlungsanteil.
-- **Blutresonanz:** Gibt einen zusätzlichen, kleinen Bonus auf Lebensgewinn bei Gegnern, die bereits bluten.
-
-**Balancehinweis:** Lebensgewinn wird mit separaten, begrenzten Umwandlungswerten für direkte Treffer und Schaden über Zeit balanciert. Mehrere Quellen dürfen nicht unbegrenzt stapeln.
-
----
+Direkter Schaden und Schaden über Zeit erhalten getrennte, begrenzte Umwandlungswerte. Mehrere Lebensgewinn-Quellen dürfen nicht unbegrenzt multiplizieren.
 
 ## Stufe 4 — Blutung und Selbstopfer
 
 ### 3. Blutige Aura
 **Typ:** Umschaltbare Aura  
-**Rolle:** Nahbereichsschaden über Zeit
+Schwebende Blutstropfen und schneidende Blutpartikel umgeben den Charakter. Gegner in Nahkampfreichweite erleiden regelmäßig Blutungsschaden.
 
-Eine Aura aus schwebenden Blutstropfen und schneidenden Blutpartikeln umgibt den Charakter. Gegner in Reichweite erleiden fortlaufend Blutungsschaden.
+**Verbesserungen**
+- **Blutregen:** Erhöht den Blutungsschaden der Aura.
+- **Offene Wunden:** Verlängert Blutungen oder verstärkt die Wirkung gegen bereits verwundete Gegner.
 
-**Vorgeschlagene Verbesserungen:**
-- **Blutregen:** Verstärkt den Blutungsschaden.
-- **Offene Wunden:** Erhöht die Dauer der Blutung oder die Wirkung gegen bereits verwundete Gegner.
-
-**Balancehinweis:** Die Aura verursacht Unterhaltskosten oder besitzt eine andere klare Begrenzung. Sie soll nicht kostenlos dauerhaft aktiv sein.
+Die Aura hat einen klaren Energieunterhalt oder eine gleichwertige Aktivitätsbegrenzung.
 
 ### 4. Blutopfer
 **Typ:** Aktive Selbstverstärkung  
-**Rolle:** Risikoreicher Schadensschub
+Der Charakter opfert einen festgelegten Anteil seines aktuellen Lebens, um seine nächsten Blutmagie-Angriffe für kurze Zeit zu verstärken. Der Effekt wird bewusst ausgelöst und wirkt nur auf Blutmagie-Fähigkeiten, nicht auf Naturfähigkeiten oder gewöhnliche Waffenangriffe.
 
-Der Charakter opfert einen festgelegten Anteil seines aktuellen Lebens, um seine nächsten Blutmagie-Angriffe für kurze Zeit zu verstärken. Der Effekt soll bewusst ausgelöst werden und nicht automatisch.
+**Verbesserungen**
+- **Tiefes Opfer:** Erhöht den Schadensbonus und zugleich die Lebenskosten.
+- **Ritual der Raserei:** Verlängert das Verstärkungsfenster und verbessert zusätzlich die Blutungswirkung.
 
-**Vorgeschlagene Verbesserungen:**
-- **Tiefes Opfer:** Erhöht den Schadensbonus, aber auch die Lebenskosten.
-- **Ritual der Raserei:** Verlängert das Verstärkungsfenster oder verstärkt zusätzlich Blutungseffekte.
-
-**Sicherheits- und Balancegrenze:** Blutopfer darf den Charakter nicht direkt töten. Es darf außerdem nicht durch Lebensgewinn unmittelbar vollständig neutralisiert werden; dafür wird ein kurzes Fenster oder eine getrennte Kostenregel verwendet.
-
----
+Blutopfer kann den Charakter nicht direkt töten. Der geopferte Lebensanteil kann nicht unmittelbar durch den Lebensgewinn des Blutpakts vollständig neutralisiert werden.
 
 ## Stufe 10 — Ausbreitung und Flächenangriff
 
 ### 5. Blutseuche
 **Typ:** Aktiver Fluch / Schaden über Zeit  
-**Rolle:** Gegnergruppen schwächen
+Ein Ziel wird mit einer magischen Blutkrankheit infiziert und erleidet über Zeit Schaden. Stirbt es während der Infektion, springt die Seuche auf nahe Gegner über.
 
-Der Charakter infiziert ein Ziel mit einer magischen Blutkrankheit. Das Ziel erleidet über Zeit Schaden. Stirbt es während der Infektion, kann die Seuche auf nahe Gegner überspringen.
-
-**Vorgeschlagene Verbesserungen:**
-- **Ansteckende Seuche:** Erhöht die Zahl möglicher Übertragungen.
+**Verbesserungen**
+- **Ansteckende Seuche:** Erhöht die begrenzte Zahl möglicher Übertragungen.
 - **Schwelendes Fieber:** Verstärkt Schaden und/oder Dauer.
-- **Blutige Inkubation:** Infizierte Gegner werden zusätzlich leicht geschwächt, beispielsweise durch reduzierte Angriffsgeschwindigkeit.
+- **Blutige Inkubation:** Infizierte Gegner werden zusätzlich leicht geschwächt, insbesondere durch reduzierte Angriffsgeschwindigkeit.
 
-**Balancehinweis:** Die Übertragung erhält eine begrenzte Sprungzahl und klare Reichweite, damit große Gegnergruppen keine endlose Kettenreaktion erzeugen.
+Die Seuche besitzt eine feste Sprungzahl und Reichweite; Kettenreaktionen sind begrenzt.
 
 ### 6. Blutnova
 **Typ:** Aktiver Flächenzauber um den Charakter  
-**Rolle:** Gegner in Nahkampfreichweite treffen
+Eine explosive Welle aus Blutenergie breitet sich vom Charakter nach außen aus und verursacht direkten Schaden. Die Grundfähigkeit ist ein Soforttreffer; Blutung und zusätzliche Splitter kommen über Verbesserungen hinzu.
 
-Eine explosive Welle aus Blutenergie bricht vom Charakter nach außen. Gegner im Umkreis erleiden direkten Schaden; eine Verbesserung kann zusätzlich Blutungen auslösen.
-
-**Vorgeschlagene Verbesserungen:**
-- **Weite Eruption:** Vergrößert den Radius.
-- **Blutsplitter:** Lässt nach der Explosion zusätzliche Splitter nach außen schießen.
-- **Aufreißende Welle:** Verstärkt Blutung gegen bereits verwundete Gegner.
-
-**Designhinweis:** Die Nova braucht eine klare Vorbereitungs- und Trefferanimation, damit der Wirkungsbereich im isometrischen Blickwinkel gut lesbar bleibt.
-
----
+**Verbesserungen**
+- **Weite Eruption:** Vergrößert den Wirkungsradius.
+- **Blutsplitter:** Nach der Explosion schießen zusätzliche Blutgeschosse nach außen.
+- **Aufreißende Welle:** Ergänzt den Treffer um Blutungsschaden, besonders wirksam gegen bereits verwundete Gegner.
 
 ## Stufe 16 — Blut aus dem Boden
 
 ### 7. Blutige Tentakel
-**Typ:** Aktiver Linien- bzw. Flächenangriff  
-**Rolle:** Mehrfachtreffer und Kontrolle
+**Typ:** Aktiver Linien-/Flächenangriff und Kontrolle  
+Blutrote Tentakel brechen in einem gewählten Angriffskorridor aus dem Boden, peitschen Gegner mehrfach und verursachen Blutungsschaden.
 
-Eine Reihe blutroter Tentakel bricht in einer gewählten Richtung aus dem Boden. Sie peitschen Gegner und verursachen Blutungsschaden.
-
-**Vorgeschlagene Verbesserungen:**
+**Verbesserungen**
 - **Mehrfacher Griff:** Erhöht die Zahl der Tentakel bzw. Treffer.
 - **Zerreißende Spitzen:** Verstärkt den Blutungsschaden.
-- **Packender Griff:** Gewöhnliche Gegner werden kurz festgehalten oder unterbrochen; Bosse erhalten höchstens einen reduzierten Effekt.
-
-**Designhinweis:** Die Tentakel sollen als zusammenhängender Angriffskorridor funktionieren und nicht zufällig hinter dem Ziel erscheinen.
+- **Packender Griff:** Hält gewöhnliche Gegner kurz fest oder unterbricht sie. Bosse erhalten höchstens einen reduzierten Kontroll- oder Verlangsamungseffekt.
 
 ### 8. Blutiger Zug
-**Typ:** Kanalisierte Fähigkeit  
-**Rolle:** Lebensentzug und Selbstheilung
-
+**Typ:** Kanalisierter Lebensentzug  
 Der Charakter verbindet sich mit einem anvisierten Gegner durch einen sichtbaren Blutstrom und entzieht ihm kontinuierlich Leben. Ein Teil des entzogenen Lebens heilt den Charakter. Die Kanalisierung endet, wenn der Spieler sie abbricht, die Reichweite verlässt oder das Ziel stirbt.
 
-**Vorgeschlagene Verbesserungen:**
+**Verbesserungen**
 - **Stärkerer Sog:** Erhöht den entzogenen Lebenswert.
 - **Blutübertragung:** Erhöht den Anteil, der den Charakter heilt.
-- **Gieriger Strom:** Ein Teil des Effekts kann auf ein nahes zweites Ziel übergehen, mit deutlich reduziertem Wert.
+- **Gieriger Strom:** Ein reduzierter Teil des Effekts kann auf ein nahes zweites Ziel übergehen.
 
-**Balancehinweis:** Während des Kanalisierens ist der Charakter in seiner Bewegung oder in anderen Aktionen eingeschränkt. Der Strahl muss unterbrochen werden können und darf nicht durch Wände gehen.
-
----
+Während der Kanalisierung ist der Charakter in Bewegung oder anderen Aktionen eingeschränkt. Der Strahl ist unterbrechbar und geht nicht durch Wände.
 
 ## Stufe 24 — Blutgebundene Kreatur
 
 ### 9. Blutgolem
-**Typ:** Beschwörung / dauerhafter Begleiter  
-**Rolle:** Frontkämpfer und Gegnerbindung
+**Typ:** Beschwörung / mobiler Begleiter  
+Beschwört einen schweren Golem aus geronnenem Blut. Er folgt dem Charakter als normaler Begleiter, sucht Gegner selbstständig und greift sie im Nahkampf an. Er bindet Gegner an sich und kann gewöhnliche Feinde mit seinen Armen festhalten oder zu Boden drücken.
 
-Beschwört einen schweren Golem aus geronnenem Blut. Er folgt dem Charakter wie ein normaler Begleiter, sucht Gegner selbstständig und greift sie im Nahkampf an. Er kann gewöhnliche Gegner mit seinen Armen festhalten oder zu Boden drücken.
-
-**Vorgeschlagene Verbesserungen:**
+**Verbesserungen**
 - **Geronnenes Bollwerk:** Erhöht Lebenspunkte und Widerstände.
 - **Schmetternde Fäuste:** Verstärkt Nahkampfschaden und Trefferwirkung.
-- **Blutbindung:** Ein Teil des vom Golem verursachten Schadens heilt den Charakter in begrenztem Umfang.
+- **Blutbindung:** Ein begrenzter Teil des vom Golem verursachten Schadens heilt den Charakter.
 
-**Abgrenzung zu Naturbegleitern:** Der Blutgolem ist ein einzelner, widerstandsfähiger Frontkämpfer. Überwucherung beschwört dagegen bis zu drei kleinere, bewegliche Pflanzengefährten mit Fernkampfangriffen.
-
----
+Ein Blutgolem gleichzeitig. Er besitzt eigene Zielsuche, Kampf-KI und Spielerfolge. Er bleibt ein schwerer Frontkämpfer und wird nicht zu einem Fernkampf-Pet.
 
 ## Stufe 32 — Meisterschaftsspitze
+Auf der höchsten regulären Freischaltungsstufe kommen keine weiteren Grundzauber hinzu. Die letzten Knoten verstärken Golem-Verteidigung und -Nahkampf, Tentakel-Kontrolle und Seuchenausbreitung.
 
-Für die höchste Stufe wird zunächst **keine elfte Fähigkeit** ergänzt. Stattdessen können besonders mächtige Verbesserungsränge für Blutgolem, Blutseuche oder Blutnova vorgesehen werden. So bleibt der Baum übersichtlich und die vorhandenen Fähigkeiten erhalten einen sinnvollen Endgame-Ausbau.
-
----
-
-## Vorläufige Übersicht
+## Verbindliche Skillbaum-Übersicht
 
 | Freischaltung | Fähigkeit | Typ |
-|---|---|---|
+|---:|---|---|
 | 1 | Blutlanze | Projektil |
 | 1 | Blutpakt | Passiv |
-| 4 | Blutige Aura | Aura |
+| 4 | Blutige Aura | Umschaltbare Aura |
 | 4 | Blutopfer | Selbstverstärkung |
+| 4 | Lanzensalve | Blutlanzen-Verbesserung |
+| 4 | Blutresonanz | Blutpakt-Verbesserung |
 | 10 | Blutseuche | Fluch / Schaden über Zeit |
 | 10 | Blutnova | Flächenzauber |
+| 10 | Durchbohrendes Blut | Blutlanzen-Verbesserung |
+| 10 | Offene Wunden | Aura-Verbesserung |
 | 16 | Blutige Tentakel | Linien-/Flächenangriff |
 | 16 | Blutiger Zug | Kanalisierter Lebensentzug |
-| 24 | Blutgolem | Begleiterbeschwörung |
-| 32 | Verbesserungsränge | Meisterschaftsspitze |
+| 16 | Blutregen | Aura-Verbesserung |
+| 16 | Ritual der Raserei | Blutopfer-Verbesserung |
+| 24 | Blutgolem | Mobiler Begleiter |
+| 24 | Ansteckende Seuche | Seuchen-Verbesserung |
+| 24 | Blutsplitter | Nova-Verbesserung |
+| 24 | Blutübertragung | Zug-Verbesserung |
+| 32 | Geronnenes Bollwerk | Golem-Verbesserung |
+| 32 | Schmetternde Fäuste | Golem-Verbesserung |
+| 32 | Packender Griff | Tentakel-Verbesserung |
+| 32 | Schwelendes Fieber | Seuchen-Verbesserung |
 
-## Bewusst nicht enthalten
+## Bewusst ausgeschlossen
+- **Herzstillstand:** vom Spieler gestrichen und bleibt gestrichen.
+- Keine weiteren Grundzauber oder zusätzlichen Beschwörungen.
+- Blutgolem bleibt ein einzelner mobiler Begleiter.
+- Blutopfer verstärkt ausschließlich Blutmagie, nicht Naturfähigkeiten.
 
-- **Herzstillstand:** Gestrichen, wie vom Spieler festgelegt.
-- Keine zusätzlichen Blutzauber, bis die zehn vorhandenen Knoten im Spiel getestet wurden.
+## Waffen und Nebenhand — gemeinsame Witchborn-Regel
+- Haupthand: einhändige Zauberstäbe.
+- Nebenhand: magische Relikte/Foki.
+- Relikte geben allgemeine Boni oder verbessern gezielt einzelne Witchborn-Fähigkeiten.
 
-## Offene Designfragen für die nächste Überarbeitung
+## Umsetzungshinweise für TQAE
+- Blutmagie wird als eigenständige auswählbare Meisterschaft umgesetzt, nicht als dritter Pfad auf demselben Charakter.
+- Die TQAE-Grenze von maximal zwei gewählten Meisterschaften bleibt bestehen.
+- Die neun Grundfähigkeiten und ihre Modifikatoren werden als TQAE-kompatible Skill-Datensätze angelegt.
+- Blutgolem, Blutlanzen, Blutnova, Tentakel, Aura, Seuche und Lebensentzug benötigen passende Pet-, Projectile-, Buff-, Debuff- und Effekt-Datensätze.
+- Keine Originaldateien oder geschützten Original-Assets werden ins öffentliche Repository kopiert.
+- Nach dem Art-Manager-Build werden Skillfreischaltung, Ränge, Schaden, Kosten, Kontrolle, Pet-KI, Save/Load und Gebietswechsel im Spiel getestet.
 
-1. Soll Blutlanze eine gerade Salve sein oder sollen die Lanzen leicht fächerförmig auseinanderfliegen?
-2. Soll Blutgolem dem Charakter immer folgen oder nur auf Befehl beschworen werden und dann an seiner Position bleiben?
-3. Soll Blutnova ausschließlich direkten Schaden verursachen oder standardmäßig auch eine Blutung auslösen?
-4. Soll Blutopfer nur Blutmagie verstärken oder vorübergehend auch Naturfähigkeiten stärken?
-
-## Nächster Entwicklungsschritt
-
-Nach Freigabe dieses Entwurfs werden beide Meisterschaften in einem gemeinsamen Skill-System umgesetzt: getrennte Meisterschaftsbalken, frei verteilbare Fähigkeitspunkte, Voraussetzungen und verknüpfte Verbesserungen. Danach folgen Zauberstäbe, Nebenhand-Relikte und die Integration in den isometrischen Kampfprototyp.
+## Festlegungen für den ersten Prototyp
+Blutlanzen fliegen als gerade Salve; Blutnova verursacht zunächst Direktschaden und erhält Blutung über eine Verbesserung; Blutopfer stärkt nur Blutmagie; Blutgolem folgt dem Spieler. Damit sind die offenen Detailfragen geschlossen, ohne neue Fähigkeiten einzuführen.
