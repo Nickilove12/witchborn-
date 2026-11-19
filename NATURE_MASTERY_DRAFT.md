@@ -110,21 +110,29 @@ Eine krankhafte, giftige Aura umhüllt den Charakter. Gegner in Reichweite erlei
 **Balancehinweis:** Die Aura soll durchgehend nützlich sein, aber Mana/Energie binden oder eine andere klare Unterhaltsbegrenzung besitzen.
 
 ### 8. Überwucherung
-**Typ:** Beschwörung  
-**Rolle:** Dauerhafter Fernkampf-Begleiter
+**Typ:** Beschwörung / permanente Begleiter  
+**Rolle:** Bis zu drei eigenständige Pflanzengefährten
 
-Beschwört eine lebende Pflanzenkreatur, die Gegner selbstständig mit giftigen Dornen beschießt.
+Beschwört lebendige, fleischfressende Pflanzenkreaturen, die dem Charakter wie normale Begleiter folgen. Sie laufen bzw. bewegen sich selbstständig mit dem Spieler durch die Spielwelt, suchen Gegner in ihrer Nähe und greifen diese eigenständig mit giftigen Dornen oder ihrem Pflanzenmaul an. Sie sind keine stationären Geschütztürme und müssen nicht an einem festen Ort platziert werden.
+
+**Aussehen und Kreaturendesign:**
+- Fantastische, gefährliche fleischfressende Pflanzen – inspiriert von den übergroßen Monsterpflanzen aus Abenteuer-Fantasyfilmen wie *Jumanji*, aber als eigenständiges Witchborn-Design.
+- Auffällige rote bis dunkelrote Blätter bzw. Blütenblätter.
+- Ein großes Pflanzenmaul mit deutlich sichtbaren, unregelmäßigen Zähnen.
+- Bewegliche Ranken und ein lebendiger Pflanzenkörper, der sich beim Laufen und Angreifen sichtbar bewegt.
+- Unheimlich und wild, aber klar als magische Pflanzenwesen erkennbar – keine gewöhnlichen Blumen und keine menschenähnlichen Kreaturen.
 
 **Beschwörungsfortschritt:**
 - Frühe Ränge: ein Pflanzenbegleiter.
 - Mittlere Ränge: zwei Pflanzenbegleiter.
 - Hohe Ränge: maximal drei Pflanzenbegleiter.
 
-Die genauen Rangschwellen werden beim Balancing festgelegt. Jeder Begleiter erhält Lebenspunkte, Angriffstempo, Reichweite und Dornen-Giftschaden passend zur Fähigkeitstufe.
+Die genauen Rangschwellen werden beim Balancing festgelegt. Jeder Begleiter erhält eigene Lebenspunkte, Bewegungsgeschwindigkeit, Angriffstempo, Reichweite und Dornen-Giftschaden passend zur Fähigkeitstufe. Die Begleiter sollen dem Charakter zuverlässig folgen und nicht an Hindernissen oder im Kampf dauerhaft zurückbleiben.
 
 **Vorgeschlagene Verbesserungen:**
 - **Stachelwachstum:** Erhöht Schaden und Angriffstempo der Begleiter.
 - **Zähe Rinde:** Erhöht ihre Lebenspunkte und Widerstände.
+- **Raubpflanzeninstinkt:** Verbessert ihr Verhalten bei der Zielsuche und lässt sie schneller auf nahe Gegner reagieren.
 
 ---
 
@@ -141,7 +149,7 @@ Eine fleischfressende Pflanze wächst an einem Zielort aus dem Boden. Sie greift
 - **Giftiger Schlund:** Verstärkt den Giftschaden.
 - **Tief verwurzelt:** Erhöht Lebenspunkte und Widerstände der Pflanze.
 
-**Abgrenzung zu Überwucherung:** Überwucherung beschwört bis zu drei mobile bzw. dem Charakter folgende Fernkampf-Begleiter. Die Würgefeige ist eine einzelne stationäre Kontrollpflanze.
+**Abgrenzung zu Überwucherung:** Überwucherung beschwört bis zu drei mobile, dem Charakter folgende Pflanzengefährten. Die Würgefeige ist dagegen eine einzelne stationäre Kontrollpflanze.
 
 ---
 
