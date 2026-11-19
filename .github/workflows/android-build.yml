@@ -26,11 +26,19 @@ jobs:
           curl -fL --retry 3 -o /tmp/android_release.apk "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_android_release.perfetto.apk"
           install -m 644 /tmp/android_debug.apk "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_debug.apk"
           install -m 644 /tmp/android_release.apk "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_release.apk"
+      - name: Create Android debug signing key
+        run: |
+          mkdir -p "$HOME/.android"
+          keytool -genkeypair -v -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Import project resources
         run: godot --headless --editor --path . --quit
       - name: Export debug APK
+        env:
+          GODOT_ANDROID_KEYSTORE_DEBUG_PATH: /github/home/.android/debug.keystore
+          GODOT_ANDROID_KEYSTORE_DEBUG_USER: androiddebugkey
+          GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
         run: |
           mkdir -p build
           godot --headless --path . --export-debug "Android" build/WITCHBORN.apk
