@@ -6,7 +6,8 @@ WITCHBORN is a mod project for **Titan Quest: Anniversary Edition**. The target 
 - Nature mastery: locust swarm, poison, spores, roots, strangling vines, living bark, and mobile plant companions.
 - Thorn Sprouts: up to three small mobile ranged companions.
 - Thorn Stalkers: up to three hip-high carnivorous plant companions with thorn projectiles and bite attacks.
-- The complete Nature specification is in `NATURE_MASTERY_DRAFT.md`.
+- Full Nature skill design: `NATURE_MASTERY_DRAFT.md`.
+- Exact mapping of all 22 existing Nature mastery nodes: `NATURE_MASTERY_SLOT_MAP.md`.
 
 ## Important status
 The repository also contains an early Godot combat prototype from an earlier direction. It is **not** the Titan Quest mod and is not an installable TQAE package.
