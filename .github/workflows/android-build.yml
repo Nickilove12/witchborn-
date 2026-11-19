@@ -6,7 +6,7 @@ on:
 
 jobs:
   android:
-    name: Export installable Android APK
+    name: Export and verify Android APK
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.7.2
@@ -41,8 +41,14 @@ jobs:
           GODOT_ANDROID_KEYSTORE_DEBUG_PASSWORD: android
         run: |
           mkdir -p build
-          godot --headless --path . --export-debug "Android" build/WITCHBORN.apk
-      - name: Upload APK
+          godot --headless --path . --export-debug "Android" build/WITCHBORN-unsigned.apk
+      - name: Sign and verify APK
+        run: |
+          BUILD_TOOLS="$ANDROID_HOME/build-tools/33.0.2"
+          "$BUILD_TOOLS/apksigner" sign --ks "$HOME/.android/debug.keystore" --ks-pass pass:android --key-pass pass:android --ks-key-alias androiddebugkey --out build/WITCHBORN.apk build/WITCHBORN-unsigned.apk
+          "$BUILD_TOOLS/apksigner" verify --verbose --print-certs build/WITCHBORN.apk
+          test -s build/WITCHBORN.apk
+      - name: Upload verified APK
         uses: actions/upload-artifact@v4
         with:
           name: WITCHBORN-Android
