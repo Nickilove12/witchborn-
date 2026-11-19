@@ -10,7 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.7.2
+    env:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+      ANDROID_HOME: /usr/lib/android-sdk
     steps:
+      - name: Install Android export requirements
+        run: |
+          apt-get update
+          apt-get install -y openjdk-17-jdk fontconfig curl
+          yes | sdkmanager --sdk_root="$ANDROID_HOME" "platform-tools" "platforms;android-33" "build-tools;33.0.2"
+      - name: Install matching Godot Android export templates
+        run: |
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.7.2.stable"
+          curl -fL --retry 3 -o /tmp/android_debug.apk "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_android_debug.perfetto.apk"
+          curl -fL --retry 3 -o /tmp/android_release.apk "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_android_release.perfetto.apk"
+          install -m 644 /tmp/android_debug.apk "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_debug.apk"
+          install -m 644 /tmp/android_release.apk "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_release.apk"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Import project resources
