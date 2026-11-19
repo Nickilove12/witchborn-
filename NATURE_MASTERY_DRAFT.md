@@ -1,202 +1,164 @@
 # WITCHBORN — Natur-Meisterschaft
-## Skillbaum-Entwurf v0.1
+## Verbindliche Fassung für Titan Quest: Anniversary Edition
 
-**Status:** Designentwurf zur gemeinsamen Abstimmung  
-**Ausrichtung:** Giftschaden, Pflanzenmagie, Kontrolle und Pflanzenbegleiter  
-**Vorbild für den Aufbau:** Titan Quest Anniversary Edition – sechs Meisterschaftsstufen, Grundfähigkeiten und verknüpfte Verbesserungen.  
-**Wichtig:** Die Zahlen für Schaden, Kosten, Dauer und Abklingzeit sind noch nicht final. Erst Spieltests bestimmen die Balance.
+**Status:** Design festgelegt; technische Umsetzung in den TQAE-Daten steht noch aus.  
+**Ausrichtung:** Heuschrecken, Gift, fleischfressende Pflanzen, Begleiter, Wurzeln und Ranken.  
+**Mod-Prinzip:** Die vorhandene Natur-Meisterschaft wird im Mod ersetzt bzw. umgebaut. Es ist kein separates Godot-Spiel und keine zusätzliche dritte Meisterschaft.
 
-## Grundregeln
+## Meisterschaftsstruktur
 
-- Natur ist eine vollständige Meisterschaft und nicht nur ein Pfad innerhalb einer gemeinsamen Meisterschaft.
-- Natur und Blutmagie besitzen jeweils einen eigenen Meisterschaftsbalken.
-- Fähigkeitspunkte dürfen frei auf beide Meisterschaften verteilt werden. Es gibt keine Pflicht, sich für eine davon zu entscheiden.
-- Die sechs Freischaltungsstufen orientieren sich am TQ-Prinzip: 1, 4, 10, 16, 24 und 32 Punkte im jeweiligen Meisterschaftsbalken.
-- Fähigkeiten können Grundfähigkeiten und daran gekoppelte Verbesserungen besitzen.
-- Zusätzliche Skillränge durch Ausrüstung dürfen die Fähigkeiten verstärken, aber keine grundlegenden Regeln aushebeln.
-- Die genaue Anzahl der Ränge je Fähigkeit wird nach dem Prototyping festgelegt.
+Die Natur-Meisterschaft bleibt eine der regulär auswählbaren Titan-Quest-Meisterschaften. Witchborn ersetzt ihre vorhandenen Natur-Fähigkeiten durch die hier beschriebenen aktiven und passiven Fähigkeiten. Das normale Zwei-Meisterschaften-System von Titan Quest bleibt erhalten.
 
----
+Die Skill-Freischaltungen orientieren sich an der Meisterschaftsleiste von TQAE. Voraussetzungen, Skillränge, Kosten, Abklingzeiten und Schadenswerte müssen beim Einbau in die Original-Datenbank an die vorhandenen TQAE-Mechaniken angepasst und im Spiel getestet werden.
 
-## Stufe 1 — Einstieg
+## Fähigkeiten
 
-### 1. Giftige Dornen
-**Typ:** Aktives Projektil  
-**Rolle:** Früher Hauptangriff / Einzelziel und kleine Gegnergruppen
+### Stufe 1 — Heuschreckenplage
+**Typ:** Aktiver Zauber / Schwarm-Projektil  
+Der Charakter entfesselt einen dichten Heuschreckenschwarm, der ein Ziel befällt und anschließend nahe Gegner ansteckt. Der Schwarm verursacht Giftschaden über Zeit und springt innerhalb seiner Reichweite weiter. Das ist der zentrale frühe Natur-Angriff.
 
-Der Charakter verschießt eine Salve giftiger Dornen. Mit steigender Fähigkeitstufe nehmen Projektilschaden, Giftschaden und – an festgelegten Rangschwellen – die Anzahl der Dornen zu.
+**Verbesserungen**
+- **Gefräßiger Schwarm:** Mehr Schaden und längere Befallsdauer.
+- **Ansteckender Schwarm:** Mehr Übersprünge und größere Übertragungsreichweite.
+- **Brutwolke:** Beim Ende eines Befalls bleibt kurz eine kleine Schwarmwolke zurück.
 
-**Vorgeschlagene Verbesserungen:**
-- **Dornenfächer:** Erhöht die Zahl der gleichzeitig verschossenen Dornen.
-- **Durchdringende Dornen:** Dornen können mehrere Gegner hintereinander treffen.
-- **Konzentriertes Gift:** Erhöht den Giftschaden über Zeit.
-
-**Designhinweis:** Die zusätzliche Projektilanzahl soll in klaren Sprüngen steigen, nicht bei jedem Rang. So bleibt der Effekt sichtbar und kontrollierbar.
-
-### 2. Naturbündnis
+### Stufe 1 — Naturbündnis
 **Typ:** Passiv  
-**Rolle:** Überlebensfähigkeit
+Erhöht Lebensregeneration und stärkt die natürliche Widerstandskraft des Charakters.
 
-Stärkt die natürliche Regeneration des Charakters.
+**Verbesserung: Lebenskraft** — zusätzlicher Regenerationsbonus; auf hohe Ränge kann ein kleiner Teil des Bonus auch auf Naturbegleiter wirken.
 
-**Vorgeschlagene Verbesserungen:**
-- **Lebensstrom:** Erhöht zusätzlich die maximale Lebensregeneration.
-- Optional später: ein kleiner Regenerationsbonus für beschworene Pflanzenbegleiter.
+### Stufe 4 — Giftige Dornen
+**Typ:** Aktives Projektil  
+Verschießt eine Salve giftiger Dornen. Mit steigenden Rängen wachsen Treffer- und Giftschaden; zusätzliche Projektile werden an festgelegten Rangschwellen freigeschaltet.
 
----
+**Verbesserungen**
+- **Dornenfächer:** Erhöht die Projektilzahl.
+- **Durchdringende Dornen:** Projektile können mehrere Gegner treffen.
+- **Konzentriertes Gift:** Verstärkt den Giftschaden über Zeit.
 
-## Stufe 4 — Giftverstärkung und Gebietskontrolle
+### Stufe 4 — Giftwaffe
+**Typ:** Passive Waffenverstärkung  
+Verleiht Waffenangriffen zusätzlichen Giftschaden. Die Umsetzung muss mit den in TQAE vorhandenen Waffen- und Angriffstypen kompatibel sein.
 
-### 3. Giftwaffe
-**Typ:** Passive Waffenverstärkung / dauerhaft aktiv nach dem Erlernen  
-**Rolle:** Verstärkt Waffenangriffe
-
-Überzieht die ausgerüstete Waffe mit Gift und fügt Waffenangriffen zusätzlichen Giftschaden hinzu. Der Bonus soll auch für den vorgesehenen einhändigen Zauberstab funktionieren.
-
-**Vorgeschlagene Verbesserungen:**
+**Verbesserungen**
 - **Ätzendes Gift:** Erhöht den Giftschaden.
-- **Anhaltendes Gift:** Verlängert die Dauer des Giftschadens.
+- **Anhaltendes Gift:** Verlängert die Giftwirkung.
 
-### 4. Sporenwolke
+### Stufe 10 — Dornenschösslinge
+**Typ:** Mobile Begleiter-Beschwörung  
+Beschwört kleine, lebendige Pflanzenschösslinge, die dem Charakter folgen und selbstständig Gegner mit Dornen beschießen. Sie sind eigenständige Begleiter, keine stationären Geschütztürme.
+
+**Begleiterregeln**
+- Maximal drei Dornenschösslinge gleichzeitig.
+- Höhere Skillränge schalten den zweiten und dritten Schössling frei.
+- Jeder Schössling besitzt eigene Lebenspunkte, Bewegung und Zielsuche.
+- Sie kehren nach Kämpfen zum Spieler zurück und bleiben in Bewegung beim Charakter.
+
+**Verbesserungen**
+- **Mehrfachsprössling:** Erhöht die Zahl der Begleiter bis zum Maximum von drei.
+- **Giftige Dornen:** Ergänzt die Geschosse um Giftschaden.
+- **Zähe Rinde:** Erhöht Lebenspunkte und Widerstände.
+
+### Stufe 10 — Sporenwolke
 **Typ:** Aktiver Flächenzauber  
-**Rolle:** Flächenkontrolle und Schaden über Zeit
+Erzeugt am Zielort eine giftige Sporenwolke. Gegner im Wirkungsbereich erleiden Giftschaden und werden in ihrer Angriffsgeschwindigkeit beeinträchtigt.
 
-Erzeugt eine giftige Wolke an einem Zielort. Gegner in der Wolke erleiden Giftschaden und werden durch die Sporen in ihrer Angriffsgeschwindigkeit beeinträchtigt.
+**Verbesserungen**
+- **Dichte Sporen:** Vergrößert Radius und/oder Schaden.
+- **Lähmende Sporen:** Verstärkt die Verlangsamung.
+- **Pilzkolonie:** Die Wolke hält länger an oder hinterlässt beim Ende einen kleineren Nachbereich.
 
-**Vorgeschlagene Verbesserungen:**
-- **Dichte Sporen:** Vergrößert die Wolke und/oder erhöht den Giftschaden.
-- **Lähmende Sporen:** Verstärkt die Verlangsamung bzw. Angriffsgeschwindigkeitsreduktion.
+### Stufe 16 — Würgeranken
+**Typ:** Aktiver Kontroll- und Flächenangriff  
+Mehrere kräftige Ranken brechen aus dem Boden, schlagen nach Gegnern und umschlingen gewöhnliche Feinde kurzzeitig. Bosse erhalten höchstens einen reduzierten Unterbrechungs- oder Verlangsamungseffekt.
 
----
+**Verbesserungen**
+- **Dornenranken:** Zusätzlicher physischer und Giftschaden.
+- **Wuchernde Ranken:** Mehr Ranken bzw. Treffer.
+- **Würgegriff:** Verlängert die kurze Fesselwirkung gegen normale Gegner.
 
-## Stufe 10 — Schwarm und Ranken
+### Stufe 16 — Wurzelgeflecht
+**Typ:** Aktive Boden-/Kontrollfähigkeit  
+Wurzeln breiten sich über einen Zielbereich aus, verlangsamen Gegner und verursachen beim Festhalten leichten Giftschaden. Die Fähigkeit ergänzt Würgeranken, bleibt aber separat auslösbar.
 
-### 5. Schwarm
-**Typ:** Aktiver Zauber, gerichtet  
-**Rolle:** Übertragbarer Schaden über Zeit
+**Verbesserungen**
+- **Tiefes Wurzelwerk:** Größerer Wirkungsbereich und stärkere Verlangsamung.
+- **Giftige Erde:** Erhöht Giftschaden und Wirkungsdauer.
+- **Verwobene Wurzeln:** Gegner, die bereits von Würgeranken getroffen wurden, werden stärker verlangsamt.
 
-Der Charakter stößt einen giftigen Insektenschwarm aus. Der Schwarm befällt einen Gegner und kann sich anschließend auf weitere Gegner ausbreiten. Inspiration ist der Heuschreckenschwarm aus Diablo III, ohne dessen Umsetzung exakt zu kopieren.
+### Stufe 24 — Dornenschlinger
+**Typ:** Mobile Begleiter-Beschwörung  
+Beschwört fleischfressende Pflanzenmonster von ungefähr Hüfthöhe (etwa 90–110 cm im Verhältnis zur Spielfigur). Sie folgen dem Charakter als echte, normale Begleiter und greifen Gegner selbstständig an.
 
-**Vorgeschlagene Verbesserungen:**
-- **Gefräßiger Schwarm:** Erhöht Giftschaden und Befallsdauer.
-- **Ansteckender Schwarm:** Erhöht die Zahl bzw. Reichweite der Übertragungen.
-- **Brutwolke:** Beim Ende des Befalls bleibt kurz eine kleine giftige Wolke zurück.
+**Verbindliches Aussehen**
+- Kräftiger, lebendiger Pflanzenkörper.
+- Auffällige rote bis dunkelrote Blätter.
+- Großes Pflanzenmaul mit deutlich sichtbaren spitzen Zähnen.
+- Bewegliche Ranken und Wurzeln.
+- Unheimliche Monsterpflanzen-Optik, keine Blumen mit Beinen und keine stationären Türme.
 
-### 6. Peitschende Ranken
-**Typ:** Aktiver Flächenangriff  
-**Rolle:** Mehrfachtreffer gegen Gruppen
+**Kampfverhalten**
+- Verschießt Dornen auf Distanz.
+- Beißt Gegner im Nahkampf.
+- Ergänzt Angriffe um Giftschaden.
+- Sucht selbstständig Ziele, folgt dem Spieler und kehrt nach Kämpfen zu ihm zurück.
 
-Mehrere Ranken brechen aus dem Boden und schlagen wiederholt auf Gegner in einem gewählten Bereich ein.
+**Beschwörungsgrenze und Entwicklung**
+- Maximal drei Dornenschlinger gleichzeitig.
+- Skillränge schalten den zweiten und dritten Begleiter frei.
+- Weitere Ränge verbessern Lebenspunkte, Dornen- und Bissschaden, Gift, Angriffstempo und Regeneration.
+- Die Kreatur bleibt hüfthoch; ihre Entwicklung zeigt sich durch stärkere Rüstung/Rinde, kräftigere rote Blätter und gefährlichere Angriffe, nicht durch übermäßiges Größenwachstum.
 
-**Vorgeschlagene Verbesserungen:**
-- **Wuchernde Ranken:** Erhöht die Zahl der Ranken bzw. Treffer.
-- **Dornenpeitschen:** Ergänzt physischen Schaden um Giftschaden.
-- Optional nach Tests: kurze Unterbrechung gewöhnlicher Gegner; keine dauerhafte Kontrolle von Bossen.
+**Verbesserungen**
+- **Stachelwachstum:** Mehr Dornen- und Angriffsschaden.
+- **Zähe Rinde:** Mehr Lebenspunkte und Widerstände.
+- **Rudelinstinkt:** Die drei Begleiter koordinieren ihre Zielsuche und erhalten einen begrenzten Synergiebonus.
 
----
-
-## Stufe 16 — Aura und Pflanzenbegleiter
-
-### 7. Giftige Pocken
+### Stufe 24 — Giftige Pocken
 **Typ:** Umschaltbare Aura  
-**Rolle:** Nahbereichsschaden
+Eine krankhafte Gift-Aura umgibt den Charakter. Gegner in Reichweite erleiden regelmäßig Giftschaden und werden leicht geschwächt.
 
-Eine krankhafte, giftige Aura umhüllt den Charakter. Gegner in Reichweite erleiden Giftschaden und Blutungsschaden.
+**Verbesserungen**
+- **Aufbrechende Pusteln:** Zusätzliche Schadensimpulse in Intervallen.
+- **Ansteckende Krankheit:** Verstärkt Dauer und Wirkung gegen Gegnergruppen.
 
-**Vorgeschlagene Verbesserungen:**
-- **Aufbrechende Pusteln:** In festgelegten Intervallen entsteht ein zusätzlicher kurzer Schadensimpuls.
-- **Ansteckende Krankheit:** Erhöht die Dauer oder Stärke der Zustände.
+### Stufe 32 — Lebende Rinde
+**Typ:** Passive Verteidigung / Natur-Synergie  
+Eine lebende Rindenschicht schützt den Charakter. Sie erhöht Verteidigung bzw. Widerstände und verbessert die Überlebensfähigkeit. Bei hohen Rängen profitieren auch beschworene Pflanzenbegleiter von einem begrenzten Teil des Schutzbonus.
 
-**Balancehinweis:** Die Aura soll durchgehend nützlich sein, aber Mana/Energie binden oder eine andere klare Unterhaltsbegrenzung besitzen.
+**Verbesserungen**
+- **Verholzter Panzer:** Erhöht den direkten Schutz.
+- **Regenerierende Rinde:** Verstärkt Lebensregeneration.
+- **Gemeinsame Wurzeln:** Überträgt einen Teil des defensiven Bonus auf Dornenschösslinge und Dornenschlinger.
 
-### 8. Überwucherung
-**Typ:** Beschwörung / permanente Begleiter  
-**Rolle:** Bis zu drei eigenständige Pflanzengefährten
+### Stufe 40 — Uralter Waldgeist
+**Typ:** Mächtige Natur-Beschwörung  
+Beschwört einen mächtigen Naturgeist als zusätzlichen Begleiter. Er greift mit Dornen- und Pflanzenmagie an und unterstützt den Charakter mit einem begrenzten Regenerationsbonus.
 
-Beschwört lebendige, fleischfressende Pflanzenkreaturen, die dem Charakter wie normale Begleiter folgen. Sie laufen bzw. bewegen sich selbstständig mit dem Spieler durch die Spielwelt, suchen Gegner in ihrer Nähe und greifen diese eigenständig mit giftigen Dornen oder ihrem Pflanzenmaul an. Sie sind keine stationären Geschütztürme und müssen nicht an einem festen Ort platziert werden.
-
-**Aussehen und Kreaturendesign:**
-- Fantastische, gefährliche fleischfressende Pflanzen – inspiriert von den übergroßen Monsterpflanzen aus Abenteuer-Fantasyfilmen wie *Jumanji*, aber als eigenständiges Witchborn-Design.
-- Auffällige rote bis dunkelrote Blätter bzw. Blütenblätter.
-- Ein großes Pflanzenmaul mit deutlich sichtbaren, unregelmäßigen Zähnen.
-- Bewegliche Ranken und ein lebendiger Pflanzenkörper, der sich beim Laufen und Angreifen sichtbar bewegt.
-- Unheimlich und wild, aber klar als magische Pflanzenwesen erkennbar – keine gewöhnlichen Blumen und keine menschenähnlichen Kreaturen.
-
-**Beschwörungsfortschritt:**
-- Frühe Ränge: ein Pflanzenbegleiter.
-- Mittlere Ränge: zwei Pflanzenbegleiter.
-- Hohe Ränge: maximal drei Pflanzenbegleiter.
-
-Die genauen Rangschwellen werden beim Balancing festgelegt. Jeder Begleiter erhält eigene Lebenspunkte, Bewegungsgeschwindigkeit, Angriffstempo, Reichweite und Dornen-Giftschaden passend zur Fähigkeitstufe. Die Begleiter sollen dem Charakter zuverlässig folgen und nicht an Hindernissen oder im Kampf dauerhaft zurückbleiben.
-
-**Vorgeschlagene Verbesserungen:**
-- **Stachelwachstum:** Erhöht Schaden und Angriffstempo der Begleiter.
-- **Zähe Rinde:** Erhöht ihre Lebenspunkte und Widerstände.
-- **Raubpflanzeninstinkt:** Verbessert ihr Verhalten bei der Zielsuche und lässt sie schneller auf nahe Gegner reagieren.
-
----
-
-## Stufe 24 — Spezialisierte Pflanzenbeschwörung
-
-### 9. Würgefeige
-**Typ:** Beschwörung / stationäre Pflanze  
-**Rolle:** Gebietskontrolle
-
-Eine fleischfressende Pflanze wächst an einem Zielort aus dem Boden. Sie greift Gegner in ihrer Reichweite an, hält gewöhnliche Gegner zeitweise fest und vergiftet sie.
-
-**Vorgeschlagene Verbesserungen:**
-- **Schnappkiefer:** Erhöht Angriffsschaden und Angriffstempo.
-- **Giftiger Schlund:** Verstärkt den Giftschaden.
-- **Tief verwurzelt:** Erhöht Lebenspunkte und Widerstände der Pflanze.
-
-**Abgrenzung zu Überwucherung:** Überwucherung beschwört bis zu drei mobile, dem Charakter folgende Pflanzengefährten. Die Würgefeige ist dagegen eine einzelne stationäre Kontrollpflanze.
-
----
-
-## Stufe 32 — Mächtige Naturbeschwörung
-
-### 10. Uralter Waldgeist
-**Typ:** Mächtige Beschwörung  
-**Rolle:** Hochstufiger Begleiter und Unterstützung
-
-Beschwört einen mächtigen Naturgeist, der Gegner mit Dornen- und Pflanzenmagie angreift. Zusätzlich unterstützt er den Charakter durch einen begrenzten Lebensregenerationsbonus.
-
-**Vorgeschlagene Verbesserungen:**
+**Verbesserungen**
 - **Zorn des Waldes:** Verstärkt Angriffe und Dornenmagie.
-- **Uralte Lebenskraft:** Verstärkt den Regenerationsbonus und die Widerstandsfähigkeit des Geistes.
+- **Uralte Lebenskraft:** Erhöht Lebenspunkte und Unterstützungswirkung.
 
-**Balancehinweis:** Der Waldgeist soll eine starke Investition in die späte Meisterschaft sein, aber nicht alle anderen Beschwörungen überflüssig machen.
+## Verbindliche Synergien
 
----
+- **Heuschreckenplage + Sporenwolke:** Befallene Gegner in der Sporenwolke erleiden einen begrenzten Zusatzschaden.
+- **Würgeranken + Wurzelgeflecht:** Bereits umschlungene Gegner werden durch das Wurzelgeflecht stärker verlangsamt.
+- **Dornenschösslinge + Giftige Dornen:** Die Schösslinge übernehmen einen Teil der Giftverbesserung.
+- **Dornenschlinger + Lebende Rinde:** Die Begleiter erhalten einen Teil des defensiven Rindenbonus.
+- **Dornenschlinger-Rudel:** Bei drei aktiven Dornenschlingern wird ein kleiner koordinierter Rudelbonus aktiviert; keine unbegrenzte Schadensmultiplikation.
 
-## Vorläufige Übersicht
+## Klare Abgrenzung der Begleiter
 
-| Freischaltung | Fähigkeit | Typ |
-|---|---|---|
-| 1 | Giftige Dornen | Projektil |
-| 1 | Naturbündnis | Passiv |
-| 4 | Giftwaffe | Waffenverstärkung |
-| 4 | Sporenwolke | Flächenzauber |
-| 10 | Schwarm | Giftzauber |
-| 10 | Peitschende Ranken | Flächenangriff |
-| 16 | Giftige Pocken | Aura |
-| 16 | Überwucherung | Begleiterbeschwörung |
-| 24 | Würgefeige | Stationäre Beschwörung |
-| 32 | Uralter Waldgeist | Mächtige Beschwörung |
+- **Dornenschösslinge:** Kleine, flinke Pflanzenbegleiter mit Dornen-Fernangriff; maximal drei.
+- **Dornenschlinger:** Hüfthohe fleischfressende Pflanzenmonster mit Dornen-Fernangriff und Biss-Nahkampf; maximal drei.
+- **Uralter Waldgeist:** Ein einzelner mächtiger Unterstützungsbegleiter.
+- Keine dieser Kreaturen ist eine stationäre Pflanze.
 
-## Bewusst nicht enthalten
+## Umsetzungshinweise für den TQAE-Mod
 
-- **Wurzelgriff:** Gestrichen, damit der Baum nicht überladen wird.
-- Es werden vorerst keine weiteren Naturfähigkeiten hinzugefügt. Erst werden die zehn vorhandenen Fähigkeiten ausgearbeitet und getestet.
-
-## Offene Designfragen für die nächste Überarbeitung
-
-1. Soll Giftwaffe nur Waffenangriffe verstärken oder auch Zauberstab-Projektile?
-2. Soll Überwucherung dem Charakter folgen oder an Ort und Stelle kämpfen?
-3. Soll Schwarm nach dem ersten Treffer automatisch überspringen oder vom Spieler auf ein Ziel gelenkt werden?
-4. Soll Giftige Pocken eine dauerhaft aktive Aura mit Energiekosten sein oder zeitlich begrenzt aktiviert werden?
-5. Welche Fähigkeiten sollen mehrere miteinander verknüpfte Verbesserungsstufen erhalten?
-
-## Nächster Entwicklungsschritt
-
-Nach der Freigabe dieses Entwurfs wird Blutmagie im gleichen Detailgrad ausgearbeitet. Danach werden beide Meisterschaften in ein gemeinsames Skill-System mit getrennten Meisterschaftsbalken und frei verteilbaren Fähigkeitspunkten integriert.
+- Die vorhandenen Natur-Skillplätze und zugehörigen Datensätze werden durch die neuen Fähigkeiten ersetzt bzw. entsprechend umgebaut; die Meisterschaft selbst bleibt die Natur-Meisterschaft.
+- Fähigkeiten, Projektile, Buffs, Pets, Effekte und Skillverknüpfungen müssen als TQAE-kompatible Datenbankeinträge und Art-Manager-Ressourcen angelegt werden.
+- Vorhandene TQAE-Mechaniken sind zu bevorzugen. Neue Engine-Funktionen oder DLL-Erweiterungen werden nicht vorausgesetzt.
+- Alle Skillränge, Werte, Pet-Limits, Kosten und Voraussetzungen müssen nach dem Einbau in TQAE getestet und balanciert werden.
+- Es werden keine Titan-Quest-Originaldateien oder Assets in das öffentliche Repository kopiert.
